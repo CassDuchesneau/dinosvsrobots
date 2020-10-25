@@ -1,0 +1,247 @@
+/* Experience */
+.section__work {
+  background: $yellow;
+  overflow: hidden;
+  color: $white;
+  padding-top: 100px;
+  padding-bottom: 140px;
+  min-height: 100vh;
+  .wrapper {
+    display: table;
+    width: 1200px;
+    height: 100%;
+    min-height: calc(100vh - 200px);
+    position: relative;
+    .container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .section__title {
+    position: relative;
+    padding-bottom: 20px;
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 3px;
+      width: 0;
+      background: $white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: width 0.6s ease 1s;
+    }
+  }
+  p {
+    + p {
+      margin-top: 10px;
+    }
+  }
+  .section__description {
+    width: 600px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      display: inline-block;
+      background: $white;
+      position: absolute;
+      right: 0;
+    }
+    &:after {
+      width: 3px;
+      height: 0;
+      top: 0;
+      transition: height 0.6s ease 1.3s;
+    }
+    &:before {
+      height: 3px;
+      width: 0;
+      bottom: 0;
+      transition: width 0.6s ease 1.8s;
+    }
+  }
+  .section__list {
+    width: 400px;
+    margin-left: 400px;
+    li {
+      font-size: 16px;
+      line-height: 24px;
+      + li {
+        margin-top: 20px;
+      }
+    }
+  }
+  .box {
+    display: block;
+    position: absolute;
+    border: 4px solid $white;
+    box-shadow: 21px -21px 0px 0px $yellow, 25px -25px 0px 0px $white;
+    &:before,
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      transform: rotate(45deg);
+      height: 35px;
+      width: 4px;
+      background: $white;
+    }
+    &:before {
+      right: -17px;
+      top: -33px;
+    }
+    &:after {
+      left: 9px;
+      top: -33px;
+    }
+    .section--decoration {
+      transform: rotate(45deg);
+      height: 35px;
+      width: 4px;
+      background: $white;
+      position: absolute;
+      bottom: -8px;
+      right: -17px;
+    }
+  }
+  .dino {
+    width: 120px;
+    height: 190px;
+    position: absolute;
+    bottom: -70px;
+    z-index: 1;
+    right: -45px;
+    transform: rotateY(180deg);
+  }
+  .section__resume {
+    display: block;
+    vertical-align: top;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 440px;
+    padding: 30px;
+    z-index: 1;
+    background: $yellow;
+    .section__subtitle,
+    p {
+      text-align: left;
+    }
+    p {
+      padding-right: 105px;
+    }
+  }
+  .btn__download {
+    display: inline-block;
+    margin-top: 30px;
+    &:hover {
+      .icon {
+        path {
+          fill: $color-tertiary;
+        }
+      }
+    }
+  }
+  .icon__download {
+    width: 50px;
+    height: 63px;
+    path {
+      fill: $white;
+      transition: fill 0.4s ease;
+    }
+  }
+}
+
+@media (max-width: 1920px) {
+}
+
+@media (max-width: 1440px) {
+  .section__work {
+    .wrapper {
+      width: 950px;
+    }
+    .section__resume {
+      width: 305px;
+      p {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .section__work {
+    .wrapper {
+      width: 755px;
+    }
+    .section__description {
+      width: 425px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .section__work {
+    .wrapper {
+      width: 625px;
+    }
+    .section__description {
+      width: 100%;
+    }
+    .section__resume {
+      width: 440px;
+      position: relative;
+      margin: 60px 30px 0 auto;
+      p {
+        padding-right: 105px;
+      }
+    }
+    .dino {
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+  .section__work {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    .wrapper {
+      width: 100%;
+    }
+    .section__resume {
+      width: calc(100% - 30px);
+      padding: 20px;
+      p {
+        padding-right: 0;
+      }
+    }
+    .dino {
+      right: 60px;
+      width: 105px;
+      height: 166px;
+    }
+    .icon__download {
+      width: 35px;
+      height: 44px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .section__work {
+    .dino {
+      right: 30px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+}

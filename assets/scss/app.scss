@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+
+/* Vendor Dependencies */
+@import "meyer-reset";
+//@import "animate";
+
+/* Authored Dependencies */
+@import "global/colors";
+@import "global/breakpoints";
+@import "global/fonts";
+@import "global/mixins";
+
+/* Patterns */
+// @import "global/tabs";
+// @import "global/modals";
+
+/* Sections */
+@import "global/header";
+// @import "global/footer";
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+* {
+   outline: none;
+   padding: 0;
+   opacity: 1;
+   margin: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+html,body {
+   overflow-x: hidden;
+}
+
+body {
+   font-family: sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -webkit-backface-visibility: hidden;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder,
+input:-moz-placeholder, textarea:-moz-placeholder,
+input::-moz-placeholder, textarea::-moz-placeholder,
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+   color: #000;
+}
+
+
+
+/* ==========================================================================
+   Containers
+   ========================================================================== */
+
+.wrapper {
+   width: 1440px;
+   margin: 0 auto;
+}
+
+.fullwidth {
+   width: 100%;
+}
+
+@import "section/landing";
+@import "section/about";
+@import "section/experience";
+@import "section/contact";
+
+
+/* ==========================================================================
+   Responsive Queries
+   ========================================================================== */
+
+@import "responsive";
