@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Global/Header
+   ========================================================================== */
+header {
+	color: $white;
+	position: relative;
+}
+
+.header__logo {
+	display: inline-block;
+	position: absolute;
+	top: 40px;
+	left: 50px;
+	opacity: 0;
+	transition: opacity 0.9s ease 1.6s;
+	&.animated {
+		opacity: 1;
+	}
+}
+.logo {
+	width: 180px;
+	height: 127px;
+}
+
+.nav {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 50px;
+	z-index: 5;
+	a {
+		@extend %font-primary;
+		color: $white;
+		text-decoration: none;
+		font-size: 30px;
+  	letter-spacing: .02em;
+  	line-height: 30px;
+  	display: inline-block;
+  	transition: color 0.6s ease;
+  	&:hover {
+  		color: $yellow;
+  	}
+	}
+	&--dark {
+		a {
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
+}
+.main-nav {
+	li {
+		display: block;
+		text-align: right;
+		opacity: 0;
+		transform: translateX(20px);
+		transition: opacity 0.6s ease, transform 0.6s ease;
+		&:nth-child(1){
+			transition-delay: 1.6s;
+		}
+		&:nth-child(2){
+			transition-delay: 1.8s;
+		}
+		&:nth-child(3){
+			transition-delay: 2s;
+		}
+		+ li {
+			margin-top: 20px;
+		}
+	}
+	&.animated {
+		li {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+}
+
+
+/* Media Queries */
+@media (max-width: 1919px) {
+}
+
+@media (max-width: 1440px) {
+	.logo {
+		width: 150px;
+		height: 106px;
+	}
+	.nav {
+		a {
+    	font-size: 26px;
+    	line-height: 26px;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 992px) {
+	.header__logo {
+    left: 30px;
+	}
+	.logo {
+    width: 110px;
+    height: 78px;
+	}
+	.nav {
+		right: 30px;
+		a {
+    	font-size: 24px;
+    	line-height: 24px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.nav {
+		display: none;
+		a {
+    	font-size: 18px;
+    	line-height: 20px;
+		}
+	}
+	.main-nav {
+		li {
+			+li {
+    		margin-top: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.header__logo {
+    left: 20px;
+	}
+	.logo {
+    width: 100px;
+    height: 70px;
+	}
+	.nav {
+		right: 20px;
+		top: 40px;
+		transform: none;
+	}
+}
+
+@media (max-width: 375px) {
+	.nav {
+		a {
+    	font-size: 16px;
+    	line-height: 18px;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.logo {
+    width: 80px;
+    height: 56px;
+	}
+	.nav {
+		a {
+    	font-size: 14px;
+    	line-height: 16px;
+		}
+	}
+	.main-nav {
+		li {
+			+li {
+    		margin-top: 5px;
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+#adminmenu {
+	// Fix for Appearance menu highlight on Widgets page  //
+	li.current.nohighlight > a.menu-top, 
+	li.wp-has-current-submenu.nohighlight > a.wp-has-current-submenu, 
+	li.current.menu-top.nohighlight, 
+	li.wp-has-current-submenu.nohighlight {
+		background: transparent;
+		&:after {
+			content: none;
+		}
+	}
+
+	// Blog icon change //
+	.menu-icon-post div.wp-menu-image:before {
+		content: "\f488";
+	}
+}
